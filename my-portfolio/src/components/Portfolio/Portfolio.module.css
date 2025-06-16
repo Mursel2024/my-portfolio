@@ -1,0 +1,150 @@
+.portfolioSection {
+  background: #181818;
+  padding: 48px 0 56px 0;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  background: #222;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.categoryBtn.active,
+.categoryBtn:hover {
+  background: #ff6600;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #222;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-width: 320px;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 24px rgba(255,102,0,0.13);
+}
+
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.2rem 0.9rem 1.2rem;
+  background: transparent;
+}
+
+.projectName {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.projectCategory {
+  color: #aaa;
+  font-size: 0.97rem;
+}
+
+.seeMoreWrapper{
+  text-align: right;
+  margin-top: 20px;
+  padding-right: 60px;
+}
+
+.seeMoreBtn {
+  background-color: #ff6600;
+  color: white;
+  padding: 6px 14px; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.seeMoreBtn:hover {
+  background-color: #cc5200;
+}
+
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 600px;
+  }
+
+  .seeMoreWrapper {
+    text-align: center;
+    padding-right: 0;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 1rem;
+  }
+
+  .categories {
+    gap: 12px;
+  }
+
+  .categoryBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .seeMoreBtn {
+    width: 40%;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}

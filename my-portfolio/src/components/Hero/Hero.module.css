@@ -1,0 +1,279 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5vw;
+  background: linear-gradient(90deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+  gap: 2rem;
+}
+
+.content {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+.greeting {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 4.5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #999;
+  margin-top: -1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff6600;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.socialIcon {
+  color: #ffffff;
+  background: #222;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.07);
+  border: 1.5px solid transparent;
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.socialIcon:hover {
+  background: #ff6600;
+  color: #fff;
+  border: 1.5px solid #fff;
+  transform: translateY(-3px) scale(1.08);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.hireBtn {
+  background: #ff6600;
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hireBtn:hover {
+  background: #e65500;
+}
+
+.cvBtn {
+  display: inline-flex; /* ya inline-block */
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none; /* link altı xətt yox */
+  transition: background 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.cvBtn:hover {
+  background: #fff;
+  color: #ff6600;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding-right: 1.5rem;
+}
+
+.statItem:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.statNumber {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ff6600;
+}
+
+.statText {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 0.3rem;
+}
+
+.imageWrapper {
+  max-width: 40%;
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.profileImage {
+  max-width: 380px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 40%;
+  object-fit: cover;
+  border: 4px solid #222;
+  box-shadow: 0 0 40px rgba(255, 102, 0, 0.25);
+  background: #181818;
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+.typewriter {
+  color: #ff6600;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  color: #ff6600;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0.8rem 1rem;
+    text-align: center;
+  }
+
+  .greeting {
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+  }
+
+  .name {
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    max-width: 280px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem; 
+    max-width: 100%; 
+    margin: 1rem auto 0 auto;
+    box-sizing: border-box;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .statItem {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 0 0.8rem 0;
+  }
+
+  .statNumber {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ff6600;
+    line-height: 1.2;
+  }
+
+  .statText {
+    font-size: 0.75rem;
+    color: #ccc;
+    margin-top: 0.2rem;
+    line-height: 1.2;
+  }
+
+  .imageWrapper {
+    max-width: 80%;
+    margin-top: 0;
+  }
+
+  .profileImage {
+    max-width: 260px;
+    border-radius: 40%;
+    box-shadow: 0 0 25px rgba(255, 102, 0, 0.15);
+  }
+
+  .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .socialIcon {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+}

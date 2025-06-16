@@ -1,0 +1,158 @@
+.contactSection {
+  background: #181818;
+  padding: 48px 0 56px 0;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.input, .textarea, select {
+  flex: 1;
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 0;
+  transition: border 0.2s;
+  height: 48px;
+  min-height: unset;
+  max-height: unset;
+  box-sizing: border-box;
+}
+
+.textarea {
+  resize: none;
+  min-height: 48px;
+  height: 100px;
+}
+
+.input:focus, .textarea:focus, select:focus {
+  border: 1.5px solid #ff6600;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sendBtn {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid #aaa;
+  border-radius: 6px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border 0.2s, color 0.2s, background 0.2s;
+}
+
+.sendBtn:hover {
+  background: #ff6600;
+  border-color: #ff6600;
+  color: #fff;
+}
+
+.status {
+  display: inline-block;
+  max-width: 90%;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #22bb33;
+  background: #eafaf1;
+  border: 1px solid #b6e2c6;
+}
+
+.statusError {
+  display: inline-block;
+  max-width: 90%;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #d8000c;
+  background: #ffd2d2;
+  border: 1px solid #ffbaba;
+}
+
+@media (max-width: 480px){
+  .row{
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .input, .textarea, select{
+    width: 70%;
+    max-width: 300px;
+    height: 44px;
+    font-size: 0.95rem;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+  }
+
+  .textarea{
+    height: 90px;
+  }
+
+  .buttonRow{
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .subtitle{
+    width: 90%;
+    margin: 0 auto 2rem auto;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .sendBtn{
+    width: 40%;
+    max-width: none;
+    padding: 0.9rem 0;
+    border-radius: 12px;
+    font-size: 1.1rem;
+  }
+}
